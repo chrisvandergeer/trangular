@@ -1,0 +1,2 @@
+### Start applicatie
+    ng serve

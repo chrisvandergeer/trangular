@@ -1,0 +1,16 @@
+
+<table>
+  <tr>
+    <th>row</th>
+    <th>datum</th>
+    <th>omschrijving</th>
+    <th>bedrag</th>
+  </tr>
+  <tr *ngFor="let tr of transakties">
+    <td>row</td>
+    <td>{{ tr.datum }}</td>
+    <td>{{ tr.omschrijving }}</td>
+    <td>{{ tr.bedrag}}</td>
+  </tr>
+</table>
+
