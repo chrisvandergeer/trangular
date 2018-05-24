@@ -12,10 +12,6 @@ export class TransaktieService {
 
   constructor(private http: HttpClient) { }
 
-  public helloWorld() {
-    return " Hello world";
-  }
-
   getTransakties() {
     return this.http.get(this.transaktiesUrl);
   }
