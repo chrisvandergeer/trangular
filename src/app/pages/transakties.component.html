@@ -1,15 +1,26 @@
-<table class="table table-striped table-bordered table-hover">
+<table class="table table-striped table-bordered table-hover table-sm">
   <thead>
   <tr>
     <th>datum</th>
+    <th>tegenrekening</th>
+    <th>soort</th>
     <th>omschrijving</th>
     <th>bedrag</th>
   </tr>
   </thead>
   <tr *ngFor="let tr of transakties">
-    <td>{{ tr.datum }}</td>
-    <td>{{ tr.omschrijving }}</td>
-    <td>{{ tr.bedrag}}</td>
+    <td>{{ tr.dag }}-{{ tr.maand }}-{{ tr.jaar }}</td>
+    <td>
+      <div>{{ tr.tegenrekeningNaam }}</div>
+      <div>{{ tr.tegenrekeningNummer }}</div>
+    <td>{{ tr.soortTransaktie }}</td>
+    <td>
+      <div>{{ tr.omschrijving1 }}</div>
+      <div>{{ tr.omschrijving2 }}</div>
+      <div>{{ tr.omschrijving3 }}</div>
+      <div>{{ tr.omschrijving4 }}</div>
+    </td>
+    <td>{{ tr.debetCredit}} {{ tr.bedrag | currency : "EUR" }}</td>
   </tr>
 </table>
 
