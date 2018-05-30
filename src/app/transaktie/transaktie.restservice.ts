@@ -6,7 +6,7 @@ import {Transaktie} from "./transaktie";
 @Injectable({
   providedIn: 'root'
 })
-export class TransaktieService {
+export class TransaktieRestservice {
 
   transaktiesUrl = 'assets/transakties.json';
 

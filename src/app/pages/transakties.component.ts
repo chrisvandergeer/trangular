@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
-import {TransaktieService} from "../transaktie/transaktie.service";
 import {Transaktie} from "../transaktie/transaktie";
+import {TransaktieServiceService} from "../transaktie/transaktie-service.service";
 
 @Component({
   selector: 'app-transakties',
@@ -11,7 +11,7 @@ export class TransaktiesComponent implements OnInit {
 
   transakties: Transaktie[];
 
-  constructor(private transaktieService: TransaktieService) {
+  constructor(private transaktieService: TransaktieServiceService) {
   }
 
   ngOnInit() {
@@ -19,7 +19,7 @@ export class TransaktiesComponent implements OnInit {
   }
 
   getTransakties() {
-    this.transaktieService.getTransakties()
+    this.transaktieService.getAllTransakties()
       .subscribe((transakties: Transaktie[]) => {
         this.transakties = transakties;
       });
