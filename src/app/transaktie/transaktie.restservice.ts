@@ -12,8 +12,8 @@ export class TransaktieRestservice {
 
   constructor(private http: HttpClient) { }
 
-  getTransakties() {
-    return this.http.get(this.transaktiesUrl);
+  getTransakties(): Observable<Object> {
+    return this.http.get('http://localhost:3000/transakties');
   }
 
 }
